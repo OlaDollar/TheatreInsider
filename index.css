@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  --success: hsl(142, 76%, 36%);
+  --success-foreground: hsl(355, 7%, 97%);
+
+  /* Modern Theatre-specific colors */
+  --theatre-primary: hsl(264, 89%, 58%); /* Modern purple */
+  --theatre-secondary: hsl(45, 93%, 65%); /* Warm gold */
+  --theatre-accent: hsl(348, 83%, 60%); /* Vibrant coral */
+  --theatre-dark: hsl(224, 30%, 15%); /* Deep navy */
+  --theatre-light: hsl(45, 50%, 95%); /* Cream white */
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  --success: hsl(142, 72%, 29%);
+  --success-foreground: hsl(355, 7%, 97%);
+
+  /* Modern Theatre-specific colors for dark mode */
+  --theatre-primary: hsl(264, 89%, 68%); /* Lighter purple for dark mode */
+  --theatre-secondary: hsl(45, 93%, 75%); /* Brighter gold for dark mode */
+  --theatre-accent: hsl(348, 83%, 70%); /* Lighter coral for dark mode */
+  --theatre-dark: hsl(224, 30%, 25%); /* Lighter navy for dark mode */
+  --theatre-light: hsl(45, 50%, 85%); /* Darker cream for dark mode */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .theatre-primary {
+    color: var(--theatre-primary);
+  }
+  
+  .bg-theatre-primary {
+    background-color: var(--theatre-primary);
+  }
+  
+  .theatre-secondary {
+    color: var(--theatre-secondary);
+  }
+  
+  .bg-theatre-secondary {
+    background-color: var(--theatre-secondary);
+  }
+  
+  .theatre-accent {
+    color: var(--theatre-accent);
+  }
+  
+  .bg-theatre-accent {
+    background-color: var(--theatre-accent);
+  }
+  
+  .theatre-dark {
+    color: var(--theatre-dark);
+  }
+  
+  .bg-theatre-dark {
+    background-color: var(--theatre-dark);
+  }
+  
+  .theatre-light {
+    color: var(--theatre-light);
+  }
+  
+  .bg-theatre-light {
+    background-color: var(--theatre-light);
+  }
+}
